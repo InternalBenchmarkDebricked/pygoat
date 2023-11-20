@@ -9,6 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: pip3 --version
+      - run: pip install --upgrade pip
+      - run: pip3 --version
       - uses: debricked/actions@v3
         env:
           DEBRICKED_TOKEN: ${{ secrets.DEBRICKED_TOKEN }}
